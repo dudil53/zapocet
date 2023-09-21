@@ -49,32 +49,56 @@ Objekt DEALER() slouží jako konečná a záchytná noda spojového seznamu hr�
    
 **6. TKTABLE()**
 
-TKTABLE() je třída reprezentující hrací stůl. Při zavolání zadáme počet hráčů u stolu - stůl pak vytvoří spojový seznam hráčů a dealera uloží do self.dealer, zároveň jim rozdá zadaná jména a peníze
+TKTABLE() je třída reprezentující hrací stůl. Při zavolání zadáme počet hráčů u stolu - stůl pak vytvoří spojový seznam hráčů a dealera uloží do self.dealer, zároveň jim rozdá zadaná jména a peníze. V funkci __init__ je zároveň hodně práce s GUI.
 
 Třídové funkce:
 
    **refresh**
 
+Tato funkce slouží k aktualizaci toho co vidíme na obrazovce - schování a zviditelnění karet hráčů.
 
    **blinds**
 
+Tato funkce se spustí na začátku každé nové hry. Projde hráče a od dvou prvních, kteří mají peníze, vybere small a big blind.
+
    **deal**
+
+Tato funkce projde spojový seznam hráčů a rozdá každému do ruky dvě karty - z balíčku, který je uložený jako atribut stolu. Na začátku každého kola se vytvoří a zamíchá nový balíček karet pomocí dalších funkcí.
 
    **ready_to_bet**
 
+Funkce, která proběhne spojový seznam hráčů a připraví je do pozice, ve které můžou sázet. (změní self.played na False). Funkce se volá vždy před funkcí bet.
+
    **bet**
+
+Funkce na sázení. Prochází postupně celý spojový seznam hráčů a každého se ptá na tah: všechna tlačítka na obrazovce mění stejnou proměnnou self.action_var, na tuto změnu program čeká pomocí .wait_variable(self.action_var) - každé tlačítko tuto proměnnou změní na jiný string, podle toho jaká akce má být vykonána. 
+
+Funkci řekneme jestli je preflop nebo ne - podle toho sázení buď přeskočí small a big blinda nebo ne
+
+Když funkce projde celý spojový seznam, zkontroluje, jestli každý hráč má vsazeno stejně - nebo nejvíc co může. Pokud ne, spustí druhé kolo sázek dokud se situace neopraví.
 
    **flop**
 
+Tato funkce rozdá karty na flop - první tři.
+
    **turn_river**
+   
+Tato funkce přidá vždy jednu kartu na stůl - buď čtvrtou turn a nebo pátou river.
 
    **check_table**
 
+Tato funkce kontroluje stůl a kolik hráčů je ve hře. Pokud zbývá pouze jeden, skončí kolo a nechá posledního hráče vyhrát
    **just_one_player**
+
+Tato funkce funguje párově s funkcí check_table.
 
    **clear_table**
 
+Tato funkce projde stůl a vyčistí/připraví ho na další hru - zbaví se karet, vynuluje peníze v potu atd.
+
    **close**
+
+Tato funkce řeší problém, který nastal při psaní programu - při zavření okna se zasekl celý loop a v cmd pořád běžel. Tato funkce funguje jako callback a vše ukončí při zavření okna.
 
    **check_for_winners**
 
