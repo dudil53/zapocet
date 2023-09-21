@@ -88,6 +88,7 @@ Tato funkce přidá vždy jednu kartu na stůl - buď čtvrtou turn a nebo páto
    **check_table**
 
 Tato funkce kontroluje stůl a kolik hráčů je ve hře. Pokud zbývá pouze jeden, skončí kolo a nechá posledního hráče vyhrát
+
    **just_one_player**
 
 Tato funkce funguje párově s funkcí check_table.
@@ -102,6 +103,7 @@ Tato funkce řeší problém, který nastal při psaní programu - při zavřen�
 
    **check_for_winners**
 
+Tato funkce se spustí na konci kole. Postupně jde od nejsilnější výherní pozice dolů a jako sítem se ptá jestli je na stole daná výherní pozice. Pokud ano, uloží výherce a další situace neřeší, pokud ne, ptá se na další situace. Na konci vypíše výherce a připíše jim peníze.
 
 
 # funkce
