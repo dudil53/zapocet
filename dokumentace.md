@@ -108,5 +108,32 @@ Tato funkce se spustí na konci kole. Postupně jde od nejsilnější výherní 
 
 # funkce
 
+**kombinace**
+
+Každá možná výherní kombinace má svou vlastní funkci - tato funkce se koukne na stůl a všechny hráče a zjistí jestli tato kombinace na stole je nebo ne - pokud ano, uloží výherce a returne True, pokud ne returne False
+
+**sublist**
+
+Pomocná funkce, která kontroluje jestli jedna sekvence je podsekvencí nějaké druhé - používám při postupce
+
+**payout**
+
+funkce která vyplatí odměny a vypíše jména hráčů.
+
+**cards**
+
+funkce, která vytvoří balíček karet, zamíchá a returne ho
+
+**show_mini_cards**
+
+funkce do které se vloží karta ve formě text a tato funkce vrátí načtený obrázek karty - v malém rozměru tedy kartu na stůl ne do ruky
+
+**show_card**
+
+stejně jako show_mini_cards, ale vrací karty větší velikosti
+
+
+
+
 
 # 
