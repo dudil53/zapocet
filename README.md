@@ -2,6 +2,7 @@
 Zápočtový program z předmětu Programování 2 na MFF UK Praha. Autor: Adam Fürstenzeller
 
 **PROGRAM ZAPNETE SPUŠTĚNÍM poker.py**
+
 **ve složce cards jsou všechny POTŘEBNÉ obrázky**
 
 # Obecně
