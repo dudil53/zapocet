@@ -24,3 +24,12 @@ Po posledním kole sázek se vyhodnotí situace na stole a program určí vítě
 # Konec hry
 Hra se dá kdykoliv ukončit stisknutím tlačítka na zavření okna, ve kterém se hra hraje.
 
+
+
+
+
+
+
+Vytvořil: Adam Fürstenzeller
+
+Ilustrace: Emma Viktorie Fürstenzellerová
